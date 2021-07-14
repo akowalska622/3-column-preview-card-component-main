@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+  --primary-orange: hsl(31, 77%, 52%);
+  --primary-cyan-light: hsl(184, 100%, 22%);
+  --primary-cyan-dark: hsl(179, 100%, 13%);
+  --white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --grey: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: 'Lexend-Deca', sans-serif;
+  font-weight: 400;
+  padding: 8rem 2.5rem;
+}
+
+.wrapper {
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.card {
+  padding: 5rem 4rem;
+}
+
+.card h2 {
+  margin: 2rem 0;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+.card p {
+  color: var(--white-paragraphs);
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  width: 80%;
+}
+
+.card.sedans {
+  background-color: var(--primary-orange);
+}
+
+.card.suvs {
+  background-color: var(--primary-cyan-light);
+}
+
+.card.luxury {
+  background-color: var(--primary-cyan-dark);
+}
+
+.sedans .btn {
+  color: var(--primary-orange);
+}
+
+.suvs .btn {
+  color: var(--primary-cyan-light);
+}
+
+.card.luxury .btn {
+  color: var(--primary-cyan-dark);
+}
+
+.card .btn {
+  background-color: var(--grey);
+  padding: 1.3rem 3rem;
+  border-radius: 20px;
+  cursor: pointer;
+  letter-spacing: 0.7px;
+}
+
+.card a:link,
+.card a:visited {
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.card a:hover,
+.card a:active {
+  border: 1px solid var(--grey);
+  color: var(--grey);
+  background-color: transparent;
+}
+
+@media (min-width: 1200px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20rem;
+  }
+
+  .wrapper {
+    display: flex;
+  }
+
+  .card {
+    padding: 6rem 4rem;
+  }
+
+  .card h2 {
+    font-size: 4.5rem;
+  }
+
+  .card p {
+    margin-bottom: 12rem;
+    height: 30%;
+  }
+}
